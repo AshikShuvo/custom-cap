@@ -1,0 +1,84 @@
+.validation-container {
+  text-align: center;
+}
+
+.captured-image {
+  position: relative;
+  display: inline-block;
+}
+
+.captured-image img {
+  width: 100%;
+  height: 400px;
+}
+
+.watermarks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 40%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.sector {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.sector.selected {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.triangle::after {
+  content: "▲";
+  display: block;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+
+.square::after {
+  content: "■";
+  display: block;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+
+.circle::after {
+  content: "●";
+  display: block;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+
+.red .triangle::after,
+.red .square::after,
+.red .circle::after {
+  color: red;
+}
+
+.green .triangle::after,
+.green .square::after,
+.green .circle::after {
+  color: green;
+}
+
+.blue .triangle::after,
+.blue .square::after,
+.blue .circle::after {
+  color: blue;
+}
+
+.btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #f0ad4e;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
